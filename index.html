@@ -4,9 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title></title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+    }
+    </style>
 </head>
 <body>
     
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+    <br>
+    <div class="box" onclick="changeColor()">
+    </div>
+
+    
+    <script>
+        var flag = true;
+        function changeColor(){
+            var element = this.changeColor.caller.arguments[0].target;
+            if(flag){
+                element.style.backgroundColor = "green";
+                flag = false;
+            }
+            else{
+                element.style.backgroundColor = "red";
+                flag = true;
+            }
+        }
+
+
+        // var box = document.querySelectorAll(".box");
+        // var color = ["green","white"];
+        // var colorFlag = 0;
+
+        // for(var i = 0; i < box.length; i++){
+        //     box[i].addEventListener("click",function(){
+        //         console.log(this);
+        //         this.style.backgroundColor = color[colorFlag++];
+        //         if(colorFlag == color.length){
+        //             colorFlag = 0;
+        //         }
+        //     })
+        // }
+
+        // box.forEach((element, index) => {
+        //     console.log(element);
+        // })
+
+
+        // document.querySelector(".box").addEventListener("click",function(){
+        //     console.log(this.style.backgroundColor)
+        //     this.style.backgroundColor = color[i++];
+        //     if(i == color.length){
+        //         i = 0;
+        //     }
+        // })
+        //document.querySelector("div").addEventListener("click",function()){
+           // i = 1 < color.length ? ++i :0;
+           // document.querySelector("div").style.backgroundcolor = color[i];
+       // }
+       function changeColor(event){
+            var element = event.target;
+            if(element.classList.contains("red")){
+                element.classList.remove("red");
+                element.classList.add("green");
+            }
+            else if(element.classList.contains("green")){
+                element.classList.remove("green");
+                element.classList.add("red");
+            }
+            else{
+                element.classList.add("green");
+            }
+        }
+            
+       
+     </script>
 </body>
+
 </html>
