@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculater</title>
+</head>
+<body>
+    <div class=" container">
+        <input type="text" id="num1">
+        <br>
+        <input type="text" id="num2">
+        <br>
+        <input type="radio"  checked id="add" name="numbers" ><b>+</b>
+        <input type="radio" checked  id="sub" name="numbers" ><b>-</b>
+        <input type="radio" checked id="multyply" name="numbers"><b>*</b>
+        <input type="radio" checked id="divide" name="numbers"><b>/</b>
+        <br>
+        <br>
+        <input type ="button" value="Calculate" onclick="Output()">
+        <input type="text" id="somthing">
+    </div>
+    <script>
+        function Output(){
+            var one = Number(document.getElementById("num1").value);
+            var two = Number(document.getElementById("num2").value);
+            var three = 0;
+            if (document.getElementById("add").checked){
+	               three = one + two;
+	           }
+	           else if (document.getElementById("sub").checked){ 
+	               three = one - two;
+	           }
+	           else if (document.getElementById("multyply")){
+	               three = one * two;
+	           }
+	           else{
+	               three = one / two;
+	           }
+               document.getElementById("somthing").value = three;
+               
+        }
+    </script>
+</body>
+</html>
