@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumof2TwoNumber</title>
+</head>
+<body>
+    <div>
+   <input type="text" id="text1">
+    <br>
+    <br>
+    <input type="text" id="text2">
+    <br>
+    <br>
+    <br>
+    <input type="button" value="Display Result" onclick="addNumber()"> 
+    <br>
+    <input type="text" id="sum">
+</div>
+    <script>
+       function addNumber(){
+
+        var f_name = Number(document.getElementById("text1").value);
+        var l_name = Number(document.getElementById("text2").value);
+         var res = f_name + l_name;
+         document.getElementById("sum").value = res;
+       
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>tic toc</title>
+  <style>
+    /* .container {
+      border: 1px solid black;
+      margin: auto;
+      margin-top: 20px;
+      display: flex;
+      width: 300px;
+      height: 300px;
+      flex-wrap: wrap;
+
+
+    } */
+
+    .box {
+      width: 100px;
+      height: 100px;
+      border: 1px solid black;
+      font-size: 60px;
+      text-align: center;
+      justify-content: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class=container>
+    <div class="box" id="1" onclick="takeTurn(1)"></div>
+    <div class="box" id="2" onclick="takeTurn(2)"></div>
+    <div class="box" id="3" onclick="takeTurn(3)"></div>
+    <BR>
+    <div class="box" id="4" onclick="takeTurn(4)"></div>
+    <div class="box" id="5" onclick="takeTurn(5)"></div>
+    <div class="box" id="6" onclick="takeTurn(6)"></div>
+      <BR>
+    <div class="box" id="7" onclick="takeTurn(7)"></div>
+    <div class="box" id="8" onclick="takeTurn(8)"></div>
+    <div class="box" id="9" onclick="takeTurn(9)"></div>
+
+  </div>
+  <script>
+    var numberOfClicks = 0;
+    function takeTurn(id) {
+    var clickbox = document.getElementById(id);
+      if (clickbox.innerText === "") {
+        numberOfClicks++;
+        clickbox.innerText = numberOfClicks % 2 !== 0 ? "X" : "0";
+      }
+    }
+
+
+
+
+  </script>
+</body>
+
+</html>

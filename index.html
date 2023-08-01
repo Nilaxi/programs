@@ -105,8 +105,16 @@
                 element.classList.add("green");
             }
         }
-            
-       
+         function  handleclick(id){
+            var clickbox = document.getElementById(id);
+            if(clickbox.classlist.length === 1){
+                clickbox.classlist.add("green");
+               
+            }else{
+                clickbox.classlist.remove("green");
+            }
+
+        }
      </script>
 </body>
 

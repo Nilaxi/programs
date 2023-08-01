@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            width:100px;
+            height: 100px;
+            margin: 10px;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+     <div class="box" >
+    </div> 
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <div class="box" >
+    </div>
+    <br>
+    <!-- <div class="box" onclick="changeColor()">
+    </div> -->
+    <script>
+//         //var box = document.querySelectorAll(".box");
+//        // var color = ["green","white"];
+// //for(i = 0; i , box-length; i++){
+//        //     i
+//        // }
+//        var color1 = "green";
+//        var color2 = "red"
+//        document.getElementsByClassName("box").addEventListener("click", function() {
+//         myFunction(color1, color2);
+//         });
+
+//        function myFunction(box) {
+//        document.getElementsByClassName("box").style.backgroundColor = "green", "red";
+//        }
+// function changeColor(event){
+//             var element = event.target;
+//             if(element.classList.contains("red")){
+//                 element.classList.remove("red");
+//                 element.classList.add("green");
+//             }
+//             else if(element.classList.contains("green")){
+//                 element.classList.remove("green");
+//                 element.classList.add("red");
+//             }
+//             else{
+//                 element.classList.add("green");
+//             }
+//         }
+var x = document.getElementsByClassName("box");
+x.addEventListener("click", myFunction);
+x.addEventListener("click", someOtherFunction);
+
+function myFunction() {
+    document.getElementsByClassName("box").style.backgroundColor = "green";
+}
+
+function someOtherFunction() {
+    document.getElementsByClassName("box").style.backgroundColor = "red";
+}
+
+
+       
+        
+            
+        
+    </script>
+</body>
+</html>
