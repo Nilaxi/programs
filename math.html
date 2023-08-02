@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>a^b</title>
+</head>
+<body>
+    <div class=" container">
+        <input type="text" id="num1">
+        <br>
+        <input type="text" id="num2">
+        <br>
+        <input type ="button" value="Calculate" onclick="Output()">
+        <br>
+        <br>
+        <input type="text" id="Result">
+        <br>
+        </div>
+        <script>
+        function Output(){
+            var a = Number(document.getElementById("num1").value);
+            var b = Number(document.getElementById("num2").value);
+            var c = a**b;
+            document.getElementById("Result").value = c;
+        }
+        </script>
+</body>
+</html>
