@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fibonacci series</title>
+</head>
+
+<body>
+    <div class=" container">
+        <input type="text" id="input1">
+        <br>
+        <br>
+        <input type="button" value="Calculate" onclick="fibonacci()">
+        <br>
+        <br>
+        <p id="Result" style="font-size: 20px;"></p>
+        <br>
+    </div>
+    <script>
+        function fibonacci() {
+            var input1 = Number(document.getElementById("input1").value);
+            var num1 = 0;
+            var num2 = 1;
+            var Result;
+            for (var i = 0; i <= input1; i++) {
+                Result = num1 + num2;
+                num1 = num2;
+                num2 = Result;
+                document.getElementById("Result").innerHTML += Result + " ";
+            }
+        }
+    </script>
+</body>
+</html>
