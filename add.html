@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>p jar</title>
+</head>
+
+<body>
+    <div>
+        current penalty value:
+        <span id="penaltyvalue"> 0</span>
+    </div>
+    <button onclick="addpenalty()">+10</button>
+    <br>
+    <br>
+    <input type="text" id="input1">
+    <button onclick="addcustompentalty()">Custompently</button>
+    <input type="text" id="input2">
+    <button onclick="addchangepentaly()">change pentaly value</button>
+    <script>
+        var currentvalue = 0;
+        var currentvalueFix = 0;
+        function addpenalty() {
+            var penaltyvalue = document.getElementById("penaltyvalue").innerHTML;
+            penaltyvalue = currentvalue + 10;
+            currentvalue = currentvalue + 10;
+            console.log(currentvalue);
+            document.getElementById("penaltyvalue").innerHTML = penaltyvalue;
+
+        }
+        function addcustompentalty() {
+            var newpentalty = Number(document.getElementById("input1").value) + currentvalue;
+            currentvalue = newpentalty;
+            document.getElementById("penaltyvalue").innerText = newpentalty;
+            currentvalue = newpentalty;
+        }
+        function addchangepentaly() {
+            var newpentalty = Number(document.getElementById("input2").value) + currentvalueFix;
+            currentvalueFix = newpentalty;
+            document.getElementById("input1").value = newpentalty;
+            currentvalueFix = newpentalty;
+        }
+    </script>
+</body>
+
+</html>

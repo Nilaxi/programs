@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Panalty jar</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Panalty jar</title>
 </head>
+
 <body>
-  <input type="text" id="text1" value = 0>
-  <input type="text" id="text2" placeholder="enter your custom value" >
+  <input type="text" id="text1" value=0>
+  <input type="text" id="text2" placeholder="enter your custom value">
   <br>
   <input type="button" id="submit" value="Submit" onclick="addmoney()">
   <input type="button" id="submit1" value="custom pay" onclick="customadd()">
   <br>
   <br>
- 
-  <script>
-    
-    function addmoney(){
-    var num = Number(document.getElementById("text1").value);
-    var num =  num + 10;
-    document.getElementById("text1").value =  num ;
-    console.log(num);
-     
-     }
-     
-     function customadd(){
-      var num1 = Number(document.getElementById("text2").value);
-      var num2 = Number(document.getElementById("text2").value);
-      var num1 = num1 + num2;
-      document.getElementById("text2").value = num1;
-     }
-     
 
+  <script>
+    // var currentvalue = 0
+    function addmoney() {
+      var num = Number(document.getElementById("text1").value);
+      var num = num + 10;
+      document.getElementById("text1").value = num;
+      console.log(num);
+
+    }
+    var curr = 0;
+    function customadd() {
+      var num1 = Number(document.getElementById("text2").value) + curr;
+     
     
+    }
+
+
+
   </script>
 </body>
+
 </html>
