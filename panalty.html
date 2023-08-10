@@ -7,8 +7,10 @@
 </head>
 <body>
   <input type="text" id="text1" value = 0>
+  <input type="text" id="text2" placeholder="enter your custom value" >
   <br>
   <input type="button" id="submit" value="Submit" onclick="addmoney()">
+  <input type="button" id="submit1" value="custom pay" onclick="customadd()">
   <br>
   <br>
  
@@ -21,6 +23,15 @@
     console.log(num);
      
      }
+     
+     function customadd(){
+      var num1 = Number(document.getElementById("text2").value);
+      var num2 = Number(document.getElementById("text2").value);
+      var num1 = num1 + num2;
+      document.getElementById("text2").value = num1;
+     }
+     
+
     
   </script>
 </body>
