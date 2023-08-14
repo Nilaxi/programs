@@ -9,14 +9,16 @@
 
 <body>
     <div>
-        current penalty value:
+        current penalty value: 
         <span id="penaltyvalue"> 0</span>
     </div>
-    <button onclick="addpenalty()">+10</button>
+    <button onclick="addpenalty()"></button>
     <br>
     <br>
     <input type="text" id="input1">
     <button onclick="addcustompentalty()">Custompently</button>
+    <br>
+    <br>
     <input type="text" id="input2">
     <button onclick="addchangepentaly()">change pentaly value</button>
     <script>
@@ -33,15 +35,16 @@
         function addcustompentalty() {
             var newpentalty = Number(document.getElementById("input1").value) + currentvalue;
             currentvalue = newpentalty;
+            console.log(currentvalue);
             document.getElementById("penaltyvalue").innerText = newpentalty;
-            currentvalue = newpentalty;
-        }
-        function addchangepentaly() {
-            var newpentalty = Number(document.getElementById("input2").value) + currentvalueFix;
-            currentvalueFix = newpentalty;
-            document.getElementById("input1").value = newpentalty;
-            currentvalueFix = newpentalty;
-        }
+             currentvalue = newpentalty;
+         }
+         function addchangepentaly() {
+             var newpentalty = Number(document.getElementById("input2").value) + currentvalueFix;
+             currentvalueFix = newpentalty;
+             document.getElementById("input1").value = newpentalty;
+             currentvalueFix = newpentalty;
+         }
     </script>
 </body>
 

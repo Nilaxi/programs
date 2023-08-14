@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>penalty jar</title>
+</head>
+
+<body>
+    <div>current fixed value: <span id="penaltyvalue">10</span></div>
+    <div>current penalty Amount: <span id="fixedvalue">0</span></div>
+    <br>
+    <button onclick="addfixedpenalty()">Add Fixed value</button>
+    <br>
+    <br>
+    <input type="text" id="input1">
+    <button onclick="addcustompentalty()">Add Custom Value</button>
+    <br>
+    <br>
+    <input type="text" id="newFixedValue">
+    <button onclick="changefixedvalue()">Change Fixed Value</button>
+    <script>
+        var currentFixvalue = 10;
+        var currentvalue = 0;
+        function addfixedpenalty() {
+            var fixedvalue = Number(document.getElementById("penaltyvalue").innerText);
+            var updatedValue = fixedvalue + currentvalue;
+            currentvalue = updatedValue;
+            document.getElementById("fixedvalue").innerHTML = Number(currentvalue);
+        }
+        function addcustompentalty() {
+            var newpentalty = Number(document.getElementById("input1").value);
+            var inputPanelty = Number(document.getElementById("fixedvalue").innerText);
+            document.getElementById("fixedvalue").innerText = inputPanelty + newpentalty;
+            currentvalue = Number(document.getElementById("fixedvalue").innerText);
+            document.getElementById("input1").value = "";
+        }
+        function changefixedvalue() {
+            var newpentalty = Number(document.getElementById("newFixedValue").value);
+            document.getElementById("penaltyvalue").innerText = newpentalty;
+            currentFixvalue = newpentalty;
+            document.getElementById("newFixedValue").value = "";
+         }
+    </script>
+</body>
+
+</html>
