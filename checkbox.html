@@ -15,15 +15,17 @@
         <br>
         <br>
     </div>
-    <input type="checkbox" id="list">
+     <div id="list">
+    
     </div>
+
     <script>
         var submit = document.getElementById("submit");
         function addItems() {
-            
             var test1 = document.getElementById("text1").value;
-           
+            var checkbox = document.createElement("input");
             document.getElementById("list").innerHTML += test1 + "<br>";
+            
             document.getElementById("text1").value = "";
         }
     </script>

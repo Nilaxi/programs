@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my calculater</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Calculater App</h1>
+    <div class="container">
+        <div class="display">
+            <input type="text" id="calcDisplay">
+        </div>
+        <div class="row">
+            <input type="button" class="btn" value="AC" id="clear" onclick="calcOp()" >
+            <input type="button" class="btn" value="DE" onclick="display.value = display.value.tostring().slice(0,-1)" >
+            <input type="button" class="btn" value="%" >
+            <input type="button" class="btn btn-orange" value="/" onclick="getValue()">
+        </div>
+       <div class="row">
+        <input type="button" class="btn" value="7" onclick ="display.value">
+        <input type="button" class="btn" value="8" onclick="getValue()">
+        <input type="button" class="btn" value="9" onclick="getValue()">
+        <input type="button" class="btn btn-orange" value="*" onclick="getValue()">
+    </div>
+       <div class="row">
+        <input type="button" class="btn" value="4" onclick="getValue()">
+        <input type="button" class="btn" value="5" onclick="getValue()">
+        <input type="button" class="btn" value="6" onclick="getValue()">
+        <input type="button" class="btn btn-orange" value="-" onclick="getValue()">
+       
+       </div>
+       <div class="row">
+        <input type="button" class="btn" value="1" onclick="getValue()">
+        <input type="button" class="btn" value="2" onclick="getValue()">
+        <input type="button" class="btn" value="3" onclick="getValue()">
+        <input type="button" class="btn btn-orange" value="+" onclick="getValue()">
+       </div>
+       <div class="row">
+        <input type="button" class="btn btn-long" value="0" onclick="getValue()">
+        <input type="button" class="btn" value="." onclick="getValue()">
+        <input type="button" class="btn btn-orange" value="=" onclick="display.value = eval(display.value)">
+       </div>
+    </div>
+</div>
+     <script>
+        function getValue(){
+            var currentValue = event.target.value;
+            document.getElementById("calcDisplay").value += currentValue;
+            console.log(event.target.value);
+        }
+         function calcOp(){
+             document.getElementById("calcDisplay").value = "";
+          }
+        // function equal(){
+        //     var currentValue = event.target.value;
+        //     document.getElementById("calcDisplay").value = currentValue;
+        // }
+    </script> 
+</body>
+</html>

@@ -14,15 +14,18 @@
         <br>
         <br>
     </div>
-    <div  id="list">
+    <div id="list">
         
     </div>
     <script>
         var submit = document.getElementById("submit");
-        function addItems(){
+        function addItems(){            
             var task1 = document.getElementById("text1").value;
-            document.getElementById("list").innerHTML += task1+"<br>";
-            document.getElementById("text1").value = "";
+            setTimeout(() => {
+                document.getElementById("list").innerHTML += task1+"<br>";
+                 document.getElementById("text1").value = ""; 
+            }, 2000);
+
         }
     </script>
     
