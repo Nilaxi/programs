@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculater</title>
 </head>
+
 <body>
     <div class=" container">
         <input type="text" id="num1">
@@ -20,19 +22,18 @@
         </select>
         <br>
         <br>
-        <input type ="button" value="Calculate" onclick="Output()">
+        <input type="button" value="Calculate" onclick="Output()">
         <input type="text" id="somthing">
     </div>
     <script>
-        function Output(){
+        function Output() {
             var one = Number(document.getElementById("num1").value);
             var two = Number(document.getElementById("num2").value);
             var operator = document.getElementById("selectOpe").value;
             var three = eval(one + operator + two);
             document.getElementById("somthing").value = three;
-            
-            
         }
     </script>
 </body>
+
 </html>

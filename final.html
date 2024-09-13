@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>final test</title>
 </head>
+
 <body>
     <div id="newtask">
         <input type="text" id="input">
@@ -15,29 +17,23 @@
     </div>
     <div id="list" style="font-weight: normal;">
         <script>
-        let submit = document.getElementById("submit");
-        function addItems(){            
-            let task1 = document.getElementById("input").value;
-            document.getElementById("list").innerHTML += task1+"<br>";
-            document.getElementById("input").value = ""; 
+            let submit = document.getElementById("submit");
+            function addItems() {
+                let task1 = document.getElementById("input").value;
+                document.getElementById("list").innerHTML += task1 + "<br>";
+                document.getElementById("input").value = "";
             }
-            function toggle(){
-               let element = document.getElementById("list").style.fontWeight;
-               if(element == 'normal')
-               {
-                document.getElementById("list").style.fontWeight = 'bold';
-               }
-               else
-               {
-                document.getElementById("list").style.fontWeight = 'normal';
-               }
+            function toggle() {
+                let element = document.getElementById("list").style.fontWeight;
+                if (element == 'normal') {
+                    document.getElementById("list").style.fontWeight = 'bold';
+                }
+                else {
+                    document.getElementById("list").style.fontWeight = 'normal';
+                }
             }
-       
-    </script>
+
+        </script>
 </body>
+
 </html>
-
-
-
-
-
